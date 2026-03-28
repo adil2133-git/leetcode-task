@@ -24,4 +24,4 @@ var validAnagram = function(s,t){
 }
 console.log(validAnagram("anagram","nagaram"))
 console.log(validAnagram("car","bus"))
-console.log(validAnagram("everything","litle"))
+console.log(validAnagram("everything","little"))
