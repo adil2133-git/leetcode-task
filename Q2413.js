@@ -1,9 +1,11 @@
 var smallestEvenMultiple = function(n) {
-    for(let i=1;i<=150;i++){
-        if(i%n===0 && i%2===0){
-            return i;
-        }
-    }
-}
+    let i = 1
 
-console.log(smallestEvenMultiple(77))
+    while (true){
+        if(i % 2===0 && i % n===0){
+            return i
+        }
+        i++;
+    }
+};
+console.log(smallestEvenMultiple(5))
