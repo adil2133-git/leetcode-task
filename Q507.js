@@ -11,3 +11,4 @@ var checkPerfectNubmer = function(num){
 console.log(checkPerfectNubmer(28))
 console.log(checkPerfectNubmer(10))
 console.log(checkPerfectNubmer(7))
+console.log(checkPerfectNubmer(2016))
