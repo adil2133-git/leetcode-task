@@ -1,26 +1,30 @@
-var majorityElement = function(nums){
-    let freq = {}
+var findTheDifference = function(s, t) {
+    let freq = {};
 
-    for(let i=0;i<nums.length;i++){
-        let num = nums[i]
+    // Count characters in s
+    for (let i = 0; i < s.length; i++) {
+        let ch = s[i];
 
-        if(freq[num]){
-            freq[num]++
-        }else{
-            freq[num] = 1
+        if (freq[ch]) {
+            freq[ch]++;
+        } else {
+            freq[ch] = 1;
         }
     }
 
-    let result = 0
-    let maxCount = 0
-    for(let key in freq){
-        if(freq[key] > maxCount){
-            maxCount = freq[key]
-            result = key
+    // Check characters in t
+    for (let i = 0; i < t.length; i++) {
+        let ch = t[i];
+
+        if (!freq[ch]) {
+            return ch;
+        } else {
+            freq[ch]--;
         }
     }
-    return Number(result)
-}
-console.log(majorityElement([1,2,1,2,2,2,1]))
-console.log(majorityElement([2,2,1,1,1,2,2]))
-console.log(majorityElement([3,2,3]))
+};
+
+console.log(findTheDifference("abcd", "abcde")); // e
+console.log(findTheDifference("", "y")); // y
+console.log(findTheDifference("ae", "aea")); // a
+console.log(findTheDifference("abcd", "badce")); // e
